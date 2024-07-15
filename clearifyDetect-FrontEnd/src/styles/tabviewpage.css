@@ -1,0 +1,229 @@
+/*Tab view page styles*/
+.tabview-container {
+  background-color: #f0f8ff;
+  width: 80%;
+  margin: 25px 35px 25px 150px;
+  padding: 35px;
+  border: 4px solid #000080;
+}
+
+.MuiTabs-root {
+  background-color: #000080;
+}
+
+.prediction-form-container {
+  background-color: rgb(255, 255, 255);
+  padding: 20px 40px 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+.input-text {
+  text-align: justify;
+  border: 3px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Add a hover effect */
+.input-text:hover {
+  border-color: #aaa;
+}
+
+/* Add focus styles */
+.input-text:focus {
+  outline: none;
+  border-color: #a7a7d8; /* Change border color on focus */
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25); /* Add a subtle box shadow */
+}
+
+.scanBtn,
+.explainBtn,
+.backBtn {
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  margin-top: 20px;
+  border: 2px ridge #020887;
+  background-color: #000080;
+}
+
+#startOver,
+.explainBtn {
+  margin-left: 10px;
+}
+
+.scanBtn:hover,
+.explainBtn:hover,
+.backBtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px ridge #020887;
+  cursor: pointer;
+}
+
+/* PredictionResults.css */
+
+#prediction-result-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+}
+
+#prediction-result-container h3 {
+  font-size: 17px;
+}
+
+.decision-text {
+  font-weight: bold;
+  color: blue;
+  background-color: aliceblue;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.percentages {
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin-top: 17px;
+}
+.percentages span {
+  margin-right: 30px;
+}
+
+.loading-content {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  margin-left: 130px;
+}
+.loading-text {
+  font-size: 20px;
+  color: #020887;
+}
+.loading-dots {
+  font-size: 150px;
+  padding-top: 0px;
+  text-align: center;
+  color: #020887;
+  margin-bottom: 80px;
+}
+
+.loading-dots span {
+  animation: loading-dots-animation 1s infinite;
+  opacity: 0;
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes loading-dots-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.explanation-container {
+  padding: 16px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  text-align: justify;
+}
+
+.explanation-container > :not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.explain-points {
+  padding: 10px 10px 10px 10px;
+  background-color: #ffffff;
+  border: 2px dashed #aaa;
+  margin-top: 20px;
+  color: #484848;
+}
+.explain-points ul {
+  list-style-type: none;
+  padding: 5px;
+}
+
+@media screen and (max-width: 968px) {
+  .explanation-container {
+    margin-bottom: 20px;
+  }
+
+  .prediction-form-container {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+  .tabview-container {
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px;
+  }
+
+  #startOver {
+    margin-left: 0px;
+  }
+
+  .backBtn,
+  .scanBtn,
+  .explainBtn {
+    width: 100%;
+  }
+  .explainBtn {
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+
+  .circular-progress-container {
+    margin-top: 20px;
+    margin-right: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    right: 10%;
+    top: 5%;
+  }
+
+  .loading-content {
+    display: none;
+  }
+
+  #prediction-result-container {
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+
+  .percentages span {
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+
+  .decision-text {
+    margin-left: 0px;
+    margin-right: 50px;
+  }
+}

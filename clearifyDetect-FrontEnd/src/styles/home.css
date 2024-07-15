@@ -1,0 +1,135 @@
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #000000;
+  font-family: "Aleo";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+figure img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin-left: 10px;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.header {
+  background-color: #020887;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* Home page component styles */
+.home-container {
+  background-color: aliceblue;
+  margin: auto;
+  padding-left: 70px;
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.col {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+.col img {
+  max-width: 100%;
+  padding-right: 70px;
+}
+
+.homeBtn {
+  font-family: "El Messiri", sans-serif;
+  font-size: 20px;
+  margin: 20px 0;
+  border: 2px ridge #020887;
+  padding: 15px;
+  background-color: rgb(255, 255, 255);
+}
+
+.homeBtn:hover {
+  background-color: #020887;
+  color: #ffffff;
+  border: 2px ridge #020887;
+  cursor: pointer;
+}
+
+.homeTitle {
+  font-family: "El Messiri", sans-serif;
+  text-shadow: 2px 2px 9px #5cb2f0;
+  font-size: 45px;
+  margin: 10px 0;
+  color: #020887;
+}
+
+.col p {
+  text-transform: capitalize;
+  text-align: justify;
+  line-height: 23px;
+}
+.container-footer {
+  padding-top: 10px;
+  text-align: center;
+  bottom: 0;
+  color: #707070;
+  height: 5em;
+  left: 0;
+  position: fixed;
+  font-size: 12px;
+  width: 100%;
+  background-color: #000000;
+}
+
+@media only screen and (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .col {
+    flex-basis: auto;
+    min-width: auto;
+    margin-bottom: 20px;
+  }
+
+  .col img {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  figure img {
+    margin-top: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .homeTitle {
+    font-size: 36px;
+  }
+
+  .homeBtn {
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .col p {
+    font-size: 14px;
+  }
+}
